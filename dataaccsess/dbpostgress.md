@@ -27,3 +27,22 @@ Una simple clase para ejecutar consultas a una base de datos postgres, requiere 
             return $dataSet;    
         }
     }
+```
+
+La forma de invocarla seria la siguiente:
+
+```php
+<?php
+ include  "DbPostgres.php";
+ 
+ $dataAccess = new DbPostgres();
+ $dataAccess->$dbName =  "work";
+ $dataAccess->$hostIp =  "127.0.0.1";
+ $dataAccess->$hostPort = "1433";
+ $dataAccess->$dbUser =   "user1";
+ $dataAccess->$dbPassword = "123456";
+ $sql="SELECT IdEmpleado, Name, Sqlary FROM Employees";
+ $data= dataAccess->runQuery($sql);
+ 
+php>
+```
