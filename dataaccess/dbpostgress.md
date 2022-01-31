@@ -44,5 +44,5 @@ La forma de invocarla seria la siguiente:
  $sql="SELECT IdEmpleado, Name, Sqlary FROM Employees";
  $data= dataAccess->runQuery($sql);
  
-php>
+?>
 ```
