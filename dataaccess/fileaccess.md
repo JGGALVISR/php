@@ -2,15 +2,14 @@ Acceso a Datos
 --------------
 >Para manejo de archivos de texto.
 
-    Posibles modos:
-    - Design patterns are not a silver bullet to all your problems.
-    
-    * w  - solo escritura.
-    * r  - solo lectura.
-    * a  - solo adicionar.
-    * w+ - lectura y escritura.
-    * a+ - solo adicionar,lectura y escritura.
-    * x  - nuevo archivosolo escritura.
+Posibles modos:
+- Design patterns are not a silver bullet to all your problems.
+* w  - solo escritura.
+* r  - solo lectura.
+* a  - solo adicionar.
+* w+ - lectura y escritura.
+* a+ - solo adicionar,lectura y escritura.
+* x  - nuevo archivosolo escritura.
 
 ```php
   <?php
@@ -23,3 +22,4 @@ Acceso a Datos
   
   
 ```
+ 
