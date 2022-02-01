@@ -3,6 +3,8 @@ Varios
 Otras funciones de uso diario, para consulta rapida
 
 * [Obtener la IP del servidor](#obtener-ip)
+* [Obtener la URL actual](#obtener-url)
+* [Modificar el Header para descargar un archivo](#descargar-archivo)
 
 Posibles modos:
 * w  - solo escritura.
@@ -42,5 +44,29 @@ Obtener la IP del servidor
 		} else {
     		$ip = $_SERVER['REMOTE_ADDR'];
 		}
+?>
+```
+
+Obtener la URL actual
+=====================
+```php
+<?php
+	$ruta= $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . str_replace( "menu_ppal","", $_SERVER["REQUEST_URI"]);
+?>
+```
+
+Modificar el Header para descargar un archivo
+=============================================
+```php
+<?php
+	$pathToFile = "http://localhost/files/test.txt"
+    header('Content-Type: application/octet-stream');
+    header('Content-Disposition: attachment; filename='.basename($pathToFile));
+    header('Expires: 0');
+    header('Cache-Control: must-revalidate');
+    header('Pragma: public');
+    header('Content-Length: ' . filesize($pathToFile));
+	
+
 ?>
 ```

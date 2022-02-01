@@ -23,8 +23,49 @@ Tambien es posible leer y sobreescribir todo un archivo
 
 ```php
 <?php
-	$archivo = file_get_contents('test.txt');
-	$archivo = $archivo + " modificaciones ";
-	file_put_contents('test.txt',$archivo);
+	$file = file_get_contents('test.txt');
+	$file = $file + " nuevo texto a adicionar ";
+	file_put_contents('test.txt',$file);
+?>
+```
+
+Creacion de unarchivo enformat csv
+```php
+<?php
+	$fileCsv = fopen("test.csv", 'w+');
+
+	// rs es un resulset obtenido de una consulta sql
+	foreach($rs as $row)
+	{
+		fputcsv($file, $row, ";");
+	}
+
+	fclose($fileCsv);
+?>
+```
+
+Empaquetado de archivos en ZIP y modificacion del header para su descarga
+```php
+<?php
+	$filezip= "mifile.zip";
+	$zip = new ZipArchive;
+	if ($zip->open($filezip, ZipArchive::CREATE) === TRUE) 
+	{
+		$zip->addFile("", "test1.txt");
+		$zip->addFile("", "test2.txt");
+		$zip->addFile("", "test3.txt");
+		$zip->close();
+	}
+
+	header("Pragma: public");
+	header("Expires: 0");
+	header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+	header("Cache-Control: public");
+	header("Content-Description: File Transfer");
+	header("Content-type: application/octet-stream");
+	header('Content-Disposition: attachment; filename="mifile.zip"');
+	header("Content-Transfer-Encoding: binary");
+	header("Content-Length: ".filesize($filezip));
+	@readfile($filezip);
 ?>
 ```
