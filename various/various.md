@@ -1,7 +1,7 @@
 Varios
 --------------
 Otras funciones de uso diario, para consulta rapida
- * [Obtener la IP del servidor](#-obtener-ip)
+ * [Obtener la IP del servidor](#obtener-la-ip-del-servidor)
 * [Obtener la URL actual](#obtener-url)
 * [Modificar el Header para descargar un archivo](#descargar-archivo)
 
@@ -33,7 +33,7 @@ Tambien es posible leer y sobreescribir todo un archivo
 ```
 
 Obtener la IP del servidor
-==========================
+--------------------------
 ```php
 <?php
 	if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
