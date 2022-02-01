@@ -3,34 +3,7 @@ Varios
 Otras funciones de uso diario, para consulta rapida
  * [Obtener la IP del servidor](#obtener-la-ip-del-servidor)
  * [Obtener la URL actual](#obtener-la-url-actual)
- * [link3](#modificar-el-header-para-descargar-un-archivo)
-Modificar el Header para descargar un archivo
-Posibles modos:
-* w  - solo escritura.
-* r  - solo lectura.
-* a  - solo adicionar.
-* w+ - lectura y escritura.
-* a+ - solo adicionar,lectura y escritura.
-* x  - nuevo archivosolo escritura.
-
-```php
-<?php
-  $file = fopen("test.txt", 'w+');
-  $size = filesize( $filename );
-  $data = fread( $file, $size );
-  fwrite($file, "Hola Mundo!!!");
-  fclose($file);
-?>
-```
-Tambien es posible leer y sobreescribir todo un archivo 
-
-```php
-<?php
-	$archivo = file_get_contents('test.txt');
-	$archivo = $archivo + " modificaciones ";
-	file_put_contents('test.txt',$archivo);
-?>
-```
+ * [Modificar el Header para descargar un archivo](#modificar-el-header-para-descargar-un-archivo)
 
 Obtener la IP del servidor
 --------------------------
