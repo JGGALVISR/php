@@ -19,4 +19,12 @@ Posibles modos:
   fclose($file);
 ?>
 ```
- 
+Tambien es posible leer y sobreescribir todo un archivo 
+
+```php
+<?php
+	$archivo = file_get_contents('test.txt');
+	$archivo = $archivo + " modificaciones ";
+	file_put_contents('test.txt',$archivo);
+?>
+```
