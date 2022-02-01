@@ -2,9 +2,9 @@ Varios
 --------------
 Otras funciones de uso diario, para consulta rapida
  * [Obtener la IP del servidor](#obtener-la-ip-del-servidor)
-* [Obtener la URL actual](#obtener-url)
-* [Modificar el Header para descargar un archivo](#descargar-archivo)
-
+ * [Obtener la URL actual](#obtener-la-url-actual)
+ * [link3](#modificar-el-header-para-descargar-un-archivo)
+Modificar el Header para descargar un archivo
 Posibles modos:
 * w  - solo escritura.
 * r  - solo lectura.
