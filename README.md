@@ -6,3 +6,4 @@ Repositorio personal con ejemplos de codigo en php, que utilizo en el dia a dia
 Otras funciones
 - [Varios](https://github.com/JGGALVISR/php/blob/master/various/various.md)
 
+Ultima actualización 2022
